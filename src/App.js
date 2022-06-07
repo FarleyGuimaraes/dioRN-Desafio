@@ -13,10 +13,23 @@ import {
 const colorGithub = '#010409';
 const colorFontGithub = '#C9D1D9';
 const colorDarkFontGithub = '#4F565E';
+const colorHistory = '#0e4429';
+const colorActivyHistory = '#39d353';
+
+const dioMessage = [
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0],
+  [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0],
+  [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0],
+  [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0],
+  [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0],
+  [0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+];
 
 const imageProfileGithub =
-  'https://avatars.githubusercontent.com/u/28990749?v=4';
-const urlToMyGithub = 'https://github.com/ismaelsousa';
+  'https://avatars.githubusercontent.com/u/28885835?v=4';
+const urlToMyGithub = 'https://github.com/FarleyGuimaraes';
 
 const App = () => {
   const handlePressGoToGithub = async () => {
@@ -34,27 +47,37 @@ const App = () => {
       <StatusBar backgroundColor={colorGithub} barStyle="light-content" />
       <View style={style.content}>
         <Image
-          accessibilityLabel="Ismael no quarto com fundo azul"
+          accessibilityLabel="Farley no quarto com fundo cinza"
           style={style.avatar}
           source={{uri: imageProfileGithub}}
         />
         <Text
-          accessibilityLabel="Nome: ismael moreira"
+          accessibilityLabel="Nome: Farley Guimarães"
           style={[style.defaultText, style.name]}>
-          Ismael Moreira
+          Farley Guimaraes
         </Text>
         <Text
-          accessibilityLabel="Nickname: ismael sousa"
+          accessibilityLabel="Nickname: farley guimaraes"
           style={[style.defaultText, style.nickname]}>
-          ismaelsousa
+          farleyguimaraes
         </Text>
         <Text
-          accessibilityLabel="Descrição: Software engineer | Leader tech at Fleye | Mobile Developer | Mentor
-          at Catapulta.club @ismaelmoreiraa | Prof. na DIO"
+          accessibilityLabel="Descrição: Graduando em Sistemas de Informação | @farleyguimaraes"
           style={[style.defaultText, style.description]}>
-          Software engineer | Leader tech at Fleye | Mobile Developer | Mentor
-          at Catapulta.club @ismaelmoreiraa | Prof. na DIO
+          Graduando em Sistemas de Informação | @farleyguimaraes
         </Text>
+
+        <View style={style.historyContainer}>
+          {dioMessage.map(linha =>
+            linha.map(coluna => {
+              if (coluna === 1) {
+                return <View style={[style.history, style.activity]} />;
+              } else {
+                return <View style={style.history} />;
+              }
+            }),
+          )}
+        </View>
 
         <Pressable onPress={handlePressGoToGithub}>
           <View style={style.button}>
@@ -105,6 +128,7 @@ const style = StyleSheet.create({
   description: {
     fontWeight: 'bold',
     fontSize: 14,
+    marginTop: 10,
   },
   button: {
     marginTop: 20,
@@ -115,5 +139,21 @@ const style = StyleSheet.create({
   textButton: {
     fontWeight: 'bold',
     fontSize: 16,
+  },
+  historyContainer: {
+    width: '65%',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    marginTop: 20,
+  },
+  history: {
+    backgroundColor: colorHistory,
+    width: 10,
+    height: 10,
+    borderRadius: 2,
+    margin: 1,
+  },
+  activity: {
+    backgroundColor: colorActivyHistory,
   },
 });
