@@ -14,7 +14,7 @@ const colorGithub = '#010409';
 const colorFontGithub = '#C9D1D9';
 const colorDarkFontGithub = '#4F565E';
 const colorHistory = '#0e4429';
-const colorActivyHistory = '#39d353';
+const colorActivy = '#39d353';
 
 const dioMessage = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -154,6 +154,6 @@ const style = StyleSheet.create({
     margin: 1,
   },
   activity: {
-    backgroundColor: colorActivyHistory,
+    backgroundColor: colorActivy,
   },
 });
