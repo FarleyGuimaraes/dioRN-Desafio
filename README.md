@@ -1,7 +1,14 @@
 # DIO 
-# Introdução ao React Native
+# Introdução ao React Native - Desafio
 
-![image](https://user-images.githubusercontent.com/28990749/164563574-23514d45-d504-4346-8a14-e6c423faca4b.png)
+
+<img style="width: 300px" src='https://user-images.githubusercontent.com/28885835/172274094-765325af-cfb9-40f4-b88c-f46663cf7ada.png' />
+
+# Solução
+![image](https://user-images.githubusercontent.com/28885835/172274620-d8299f16-baa8-4154-b22a-4ee4911ca97b.png)
+![image](https://user-images.githubusercontent.com/28885835/172274667-1029efc9-3ec3-427a-8074-c35dc86d6dab.png)
+![image](https://user-images.githubusercontent.com/28885835/172274710-be7bbef7-0b72-407c-944f-21d3395308e3.png)
+
 
 # Conteúdo
 - Conhecendo o React Native
